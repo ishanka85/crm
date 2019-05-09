@@ -18,8 +18,8 @@ class CreateEmailsTable extends Migration
           $table->integer('customer_id')->unsigned();
           $table->integer('user_id')->unsigned();
           $table->string('to');
-          $table->string('cc');
-          $table->string('bcc');
+          $table->string('cc')->nullable();
+          $table->string('bcc')->nullable();
           $table->string('subject');
           $table->text('body');
           $table->timestamps();
