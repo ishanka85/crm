@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\User;
+use Illuminate\Support\Facades\Validator;
 
 class AuthController extends Controller
 {
@@ -66,7 +67,7 @@ class AuthController extends Controller
       if ($validator->fails()) {
         return response()->json(['errors'=>$validator->errors()]);
       }
-      
+
       $credentials = request(['email', 'password']);
       if(!Auth::attempt($credentials))
           return response()->json([

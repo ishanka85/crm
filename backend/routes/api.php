@@ -31,7 +31,7 @@ Route::group(['middleware' => 'auth:api'], function() {
   Route::post('/user/{id}/delete', 'AuthController@delete');
 
   Route::post('/customer', 'CustomerController@store');
-  Route::get('/customer', 'CustomerController@index');
+  
   Route::post('/customer/{id}/delete', 'CustomerController@destroy');
   Route::post('/customer/{id}/edit', 'CustomerController@update');
 
@@ -48,3 +48,5 @@ Route::group(['middleware' => 'auth:api'], function() {
   Route::get('/customer/{id}/email', 'EmailController@index');
 
 });
+
+Route::get('/customer', 'CustomerController@index'); 
