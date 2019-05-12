@@ -1,0 +1,51 @@
+<form [formGroup]="userForm" fxFlex>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Add new user</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="">{{ success }}</div>
+    <div class="error">{{ error }}</div>
+    <div>
+      <div class="mdc-select">
+        <i class="mdc-select__dropdown-icon"></i>
+        <label class="mdc-floating-label">Type</label>
+        <select class="mdc-select__native-control" [(ngModel)]="role_id" formControlName="role_id">
+          <option value="2">
+            Sales staff
+          </option>
+          <option value="1">
+            Admin
+          </option>
+        </select>
+        <div class="mdc-line-ripple"></div>
+      </div>
+    </div>
+    <div>
+      <mat-form-field>
+        <input class="w-100" matInput placeholder="Name" [(ngModel)]="name" formControlName="name">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input class="w-100" matInput placeholder="Email" [(ngModel)]="email" formControlName="email">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input class="w-100" matInput placeholder="Password" [(ngModel)]="password" formControlName="password">
+      </mat-form-field>
+    </div>
+
+    <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+      <div fxFlexFill>
+        <button mat-raised-button color="primary" class="w-100" (click)="onAdduser()">Submit</button>
+      </div>
+    </div>
+    
+
+  </mat-card-content>
+</mat-card>
+</form>

@@ -1,0 +1,48 @@
+<form [formGroup]="emailForm" fxFlex>
+  <div class="">{{ success }}</div>
+  <div class="error">{{ error }}</div>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Log email</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="To" [(ngModel)]="to" formControlName="to">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="CC" [(ngModel)]="cc" formControlName="cc">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="BCC" [(ngModel)]="bcc" formControlName="bcc">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Subject" [(ngModel)]="subject" formControlName="subject">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Body" [(ngModel)]="body" formControlName="body">
+      </mat-form-field>
+    </div>
+
+    <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+      <div fxFlexFill>
+        <button mat-raised-button color="primary" class="w-100" (click)="onAddemail()">Submit</button>
+      </div>
+    </div>
+
+  </mat-card-content>
+</mat-card>
+</form>

@@ -1,0 +1,22 @@
+<div id="sidebar">
+    <mat-nav-list>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/']">
+            <mat-icon class="sidenav-icon">home</mat-icon> {{ 'Home' }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/users']">
+            <mat-icon class="sidenav-icon"></mat-icon> {{ 'Users' }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/customers']">
+            <mat-icon class="sidenav-icon"></mat-icon> {{ 'Customers' }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/emails']">
+            <mat-icon class="sidenav-icon"></mat-icon> {{ 'Emails' }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/meetings']">
+            <mat-icon class="sidenav-icon"></mat-icon> {{ 'Meetings' }}
+        </a>
+        <a mat-list-item [routerLinkActive]="'active'" [routerLink]="['/calls']">
+            <mat-icon class="sidenav-icon"></mat-icon> {{ 'Calls' }}
+        </a>
+    </mat-nav-list>
+</div>

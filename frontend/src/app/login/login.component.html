@@ -1,0 +1,53 @@
+<div class="login-page">
+    <div class="content">
+        <!-- <form [formGroup]="loginForm" (ngSubmit)="onLogin" class="login-form" fxFlex novalidate>
+            <div class="text-center">
+                <h2 class="app-name">Login</h2>
+            </div>
+            <div fxFlex  fxlayout="row" fxlayout.lt-md="column">
+                <div fxFlexFill>
+                    <mat-form-field class="w-100">
+                        <input [(ngModel)]="email" formControlName="email" matInput placeholder="Email">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlexFill>
+                    <mat-form-field class="w-100">
+                        <input [(ngModel)]="password" matInput formControlName="password" type="password" placeholder="Password">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex  fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlexFill>
+                    <button mat-raised-button color="primary" class="w-100" (click)="onLogin()">Login</button>
+                </div>
+            </div>
+
+        </form> -->
+        <form [formGroup]="loginForm"  class="login-form" fxFlex>
+            <div class="text-center">
+                <h2 class="app-name">Login</h2>
+            </div>
+            <div fxFlex fxlayout="row" fxlayout.lt-md="column">
+                <div fxFlexFill>
+                    <mat-form-field class="w-100">
+                        <input [(ngModel)]="email" formControlName="email" matInput placeholder="Email">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlexFill>
+                    <mat-form-field class="w-100">
+                        <input [(ngModel)]="password" matInput formControlName="password" type="password" placeholder="Password">
+                    </mat-form-field>
+                </div>
+            </div>
+            <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+                <div fxFlexFill>
+                    <button mat-raised-button color="primary" class="w-100" (click)="onLogin()">Login</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Log calls</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Customer" aria-label="Customer" [matAutocomplete]="auto" [formControl]="customerCtrl" />
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let customer of filteredCustomer | async" [value]="customer.id">
+            <span>{{ customer.name }}</span>
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Phone Number">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Contact person name">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Subject">
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Summary">
+      </mat-form-field>
+    </div>
+
+  </mat-card-content>
+</mat-card>
